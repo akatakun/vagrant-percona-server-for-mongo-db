@@ -20,10 +20,10 @@ Vagrant.configure(2) do |config|
     vagrant1.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
   end
 
-  config.vm.define "vagrant2" do |vagrant2|
-    vagrant2.vm.box = 'CentOS 7.2 x64'
-    vagrant2.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
-  end
+  #config.vm.define "vagrant2" do |vagrant2|
+  #  vagrant2.vm.box = 'CentOS 7.2 x64'
+  #  vagrant2.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
+  #end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
