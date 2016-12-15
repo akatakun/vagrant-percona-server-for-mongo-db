@@ -15,25 +15,23 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.define 'daemon1'   do |vagrant|
+  config.vm.define 'daemon1' do |vagrant|
     vagrant.vm.box = 'CentOS 7.2 x64'
     vagrant.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
+    vagrant.vm.network :private_network, ip: '192.168.56.11'
   end
 
-  config.vm.define 'report1'   do |vagrant|
+  config.vm.define 'config1' do |vagrant|
     vagrant.vm.box = 'CentOS 7.2 x64'
     vagrant.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
+    vagrant.vm.network :private_network, ip: '192.168.56.21'
   end
 
-  config.vm.define 'userinfo1' do |vagrant|
+  config.vm.define 'mongos1' do |vagrant|
     vagrant.vm.box = 'CentOS 7.2 x64'
     vagrant.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
+    vagrant.vm.network :private_network, ip: '192.168.56.31'
   end
-
-  #config.vm.define "vagrant2" do |vagrant2|
-  #  vagrant2.vm.box = 'CentOS 7.2 x64'
-  #  vagrant2.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
-  #end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
