@@ -31,7 +31,7 @@ Vagrant.configure(2) do |config|
     vagrant.vm.box = 'CentOS 7.2 x64'
     vagrant.vm.box_url = 'https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box'
     vagrant.vm.network :private_network, ip: '192.168.56.31'
-    vagrant.vm.network :forwarded_port, host: 27019, guest: 27017
+    vagrant.vm.network :forwarded_port, host: 27017, guest: 27017
   end
 
   # Disable automatic box update checking. If you disable this, then
